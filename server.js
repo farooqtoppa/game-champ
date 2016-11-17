@@ -16,3 +16,6 @@ mongoose.Promise = global.Promise;
 // create connection to game app db
 var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/gamechamp';
 mongoose.connect(mongoURI);
+
+// Access User Model
+var User = require('./models/user');
