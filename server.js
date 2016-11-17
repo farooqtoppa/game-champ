@@ -10,3 +10,9 @@ var passport        = require('passport');
 var LocalStrategy   = require('passport-local').Strategy;
 var port            = process.env.PORT || 4000;
 var app             = express();
+
+mongoose.Promise = global.Promise;
+
+// create connection to game app db
+var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/gamechamp';
+mongoose.connect(mongoURI);
