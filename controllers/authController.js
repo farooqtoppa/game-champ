@@ -70,10 +70,27 @@ var authorize = function(req, res, next) {
   }
 };
 
-
-
-
-
-
+// ==================================
+// UPDATE USER PASSWORD
+// ==================================
+router.patch('/:id/reset', function(req, res) {
+  console.log('this is the password', req.body.password);
+  User.findById(req.params.id).exec()
+  .catch(function(err) {
+    console.log(err);
+  })
+  .then(function(user) {
+    if(req.body.password) {
+      user.setPassword(req.body.password, function(){
+        user.save();
+        console.log('password has changed successfully');
+        res.json( {status: 200, user: user})
+      })
+    }
+    else{
+      res.json( {status: 406})
+    }
+  })
+});
 
 module.exports = router;
