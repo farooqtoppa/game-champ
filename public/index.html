@@ -12,7 +12,7 @@
    <script src="js/gameController.js"></script>
 
 </head>
-<body>
-
+<body ng-controller="GameController as gameCtrl">
+<a ng-click="gameCtrl.getProducts()" ui-sref="index">Products</a>
 </body>
 </html>
