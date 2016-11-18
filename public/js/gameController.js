@@ -2,6 +2,11 @@
   angular.module('GameChamp')
   .controller('GameController', GameController);
 
+  GameController.$inject = ['$http', '$state'];
+
+  function GameController($http, $state) {
+
+  }
 
 })()
 
