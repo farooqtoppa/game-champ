@@ -22,6 +22,30 @@ router.post('/signup', function(req, res) {
     });
 });
 
+// ===================================
+// LOG IN
+// ===================================
+router.post('/login', passport.authenticate('local'), function(req, res) {
+  req.session.save(function(err){
+    if(err) {
+      return next(err);
+    }
+    else{
+      res.json({ status: 200, message: 'ok', user: req.user});
+    }
+  });
+});
+
+router.get('/', (req, res) => {
+  var query = User.find({});
+
+  query.then(function(users){
+    res.json({ users: users, user: req.user})
+  })
+  .catch(function(err) {
+    console.log(err)
+  });
+});
 
 
 
