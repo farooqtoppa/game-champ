@@ -1,4 +1,4 @@
-var mongoose  = require('mongoose');
+var mongoose = require('mongoose');
 
 var productSchema = new mongoose.Schema({
   name: String,
@@ -8,4 +8,4 @@ var productSchema = new mongoose.Schema({
   imageurl: String
 });
 
-module.exports = mongoose.model('product', productSchema);
+module.exports = mongoose.model('Product', productSchema);

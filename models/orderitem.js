@@ -1,6 +1,6 @@
-var mongoose        = require('mongoose');
+var mongoose = require('mongoose');
 
-var ProductSchema   = require('./product').schema;
+var ProductSchema = require('./product').schema;
 
 var OrderItemSchema = new mongoose.Schema({
   quantity: Number,
