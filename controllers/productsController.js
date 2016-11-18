@@ -25,6 +25,21 @@ router.get('/', function(req, res) {
   })
 })
 
+//==============================
+// ONE PRODUCT
+// =============================
+router.get('/:id', function(req, res) {
+  Product.findById(req.params.id).exec()
+  .then(function(product){
+    console.log(product);
+    res.json(product);
+  })
+  .catch(function(err){
+    console.log(err);
+    res.status(500);
+  })
+});
+
 
 
 module.exports = router;
