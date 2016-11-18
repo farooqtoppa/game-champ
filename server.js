@@ -28,4 +28,28 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded( {extended: false} ));
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
+app.use(require('express-session')({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false
+}))
+app.use(passport.initialize());
+app.use(passport.session());
 
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use('/api/users', require('./controllers/authController.js'));
+app.use('/api/games', require('./controllers/gamesController.js'));
+app.use('/orders', require('./controllers/ordersController.js'));
+
+app.use(function(req, res, next){
+  res.redirect('/');
+});
+
+app.listen(port, function(){
+  console.log('========================');
+  console.log('Running on port ' + port);
+  console.log('=========================');
+});
