@@ -14,7 +14,7 @@ var app             = express();
 mongoose.Promise = global.Promise;
 
 // create connection to game app db
-var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/gamechamp';
+var mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/gameapp';
 mongoose.connect(mongoURI);
 
 // Access User Model
@@ -40,12 +40,15 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// =================================
+// ROUTING MIDDLEWARE
+// ==================================
 app.use('/api/users', require('./controllers/authController.js'));
-app.use('/api/games', require('./controllers/gamesController.js'));
-app.use('/orders', require('./controllers/ordersController.js'));
+//app.use('/api/games', require('./controllers/gamesController.js'));
+//app.use('/orders', require('./controllers/ordersController.js'));
 
 app.use(function(req, res, next){
-  res.redirect('/');
+  res.redirect("/");
 });
 
 app.listen(port, function(){
