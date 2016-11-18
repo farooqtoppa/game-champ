@@ -44,7 +44,7 @@ passport.deserializeUser(User.deserializeUser());
 // ROUTING MIDDLEWARE
 // ==================================
 app.use('/api/users', require('./controllers/authController.js'));
-app.use('/api/games', require('./controllers/ordersController.js'));
+app.use('/api/orders', require('./controllers/ordersController.js'));
 //app.use('/orders', require('./controllers/ordersController.js'));
 
 app.use(function(req, res, next){
