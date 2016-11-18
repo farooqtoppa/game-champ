@@ -1,5 +1,5 @@
 name,price,description,category,imageurl
-Samsung 40 inch HDTV ,400.99,"All your favorite TV, movies, games and media content come to life in stunning Full HD 1080p with twice the resolution of standard HD TV. ",electronics,http://imgur.com/W8ycE51
+Samsung 40 inch HDTV ,400.99,"All your favorite TV, movies, games and media content come to life in stunning Full HD 1080p with twice the resolution of standard HD TV. ", electronics, http://imgur.com/W8ycE51
 Samsung 32 inch HDTV,179.99,"With Samsung Smart Hub on this TV, you can easily navigate to your favorite entertainment. Watch movies, TV shows, sports and news, access social media, play games, plus browse the Web.",electronics,http://imgur.com/W8ycE51
 Apple Macbook Pro 12 inches,1599.99,MacBook delivers a full-size experience in the lightest and most compact Mac notebook ever. ,electronics,http://imgur.com/tqk7rOk
 Apple MacBook Air 13.3 inches,1049.99,"MacBook Air features up to 8GB of memory, a fifth-generation Intel Core processor, Thunderbolt 2, great built-in apps, and all-day battery life.",electronics,http://imgur.com/8cN2FRo
@@ -28,3 +28,4 @@ Dumbbells medicine balls kettlebells and Olympic plates not included",fitness,ht
 Fitbit Charge 2 HR & Fitness Wristband,149.99,"Challenge yourself to make every beat count with the help of the Fitbit Charge 2 HR & Fitness Wristband. This fitness tracker is small but mighty, and includes an easy-to-read OLED screen so you can quickly and easily view steps, heart rate, sleep data and more while on the go. ",fitness,http://imgur.com/6FhO4kU
 Weslo Cadence R5.2 Treadmill,449.99,Weslo Cadence R 5.2 Treadmill2.25 HP drive system16 X 50 Walking Belt Comfort cell cushion deck2 position adjustable incline Style Code WLTL29712,fitness,http://imgur.com/EBjHWhV
 ProForm 325 CSX Excercise Bike,499.99,"ProForm 325 CSX Exercise BikePFEX5391524 Workout Apps-When you step into the pedals of a ProForm bike, you get instant access to professional training programs fully loaded and ready to go. ",fitness,http://imgur.com/2WJlbXI
+

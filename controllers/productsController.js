@@ -1,10 +1,11 @@
-var express     = require('express'),
-router          = express.Router();
+var express = require('express'),
+    router  = express.Router();
 
-var Product     = require('../models/product');
+var Product = require('../models/product');
 
-var authorize = function(req, res, next) {
-  if(!req.user) {
+//Authorize User before showing them products
+var authorize = function(req,res,next){
+  if(!req.user){
     res.json(401, 'unauthorized')
   }
   else{
@@ -12,23 +13,17 @@ var authorize = function(req, res, next) {
   }
 }
 
-//==============================
-// INDEX ALL PRODUCTS
-// =============================
-router.get('/', function(req, res) {
+router.get('/', function(req, res){
   var query = Product.find({});
-  query.then(function(products) {
-    res.json({ products: products, user: req.user});
+  query.then(function(products){
+    res.json({products: products, user: req.user});
   })
   .catch(function(err){
     res.status(500);
   })
-})
+});
 
-//==============================
-// ONE PRODUCT
-// =============================
-router.get('/:id', function(req, res) {
+router.get('/:id', function(req, res){
   Product.findById(req.params.id).exec()
   .then(function(product){
     console.log(product);
@@ -39,7 +34,6 @@ router.get('/:id', function(req, res) {
     res.status(500);
   })
 });
-
 
 
 module.exports = router;

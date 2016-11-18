@@ -1,22 +1,30 @@
-var express       = require('express'),
-router            = express.Router();
+var express = require('express'),
+    router  = express.Router();
 
-var Product       = require('../models/product');
-var Order         = require('../models/order');
+var Product = require('../models/product');
+var Order = require('../models/order');
 
-// Authorize
-var authorize = function(req, res, next) {
-  if(!req.user || req.user._id.toString() !== req.params.userId.toString()) {
+//Authorize User before showing them products
+var authorize = function(req,res,next){
+  if(!req.user || req.user._id.toString() !== req.params.userId.toString()){
     res.json(401, 'unauthorized')
   }
   else{
     next()
   }
 }
+// router.get('/',authorize,function(req, res){
+//   Order.find({}).exec()
+//   .then(function(orders){
+//     console.log(orders);
+//     res.json(orders);
+//   })
+//   .catch(function(err){
+//     console.log(err);
+//     res.status(500);
+//   })
+// });
 
-// =============================
-// CREATE ORDER
-// =============================
 router.post('/', function(req, res){
   console.log("req.body", req.body);
   Order.create({
@@ -45,9 +53,5 @@ router.get('/:userId', authorize, function(req, res){
     res.status(500);
   })
 });
-
-
-
-
 
 module.exports = router;
