@@ -36,6 +36,9 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
   });
 });
 
+// ==================================
+// ALL USERS
+// ==================================
 router.get('/', (req, res) => {
   var query = User.find({});
 
