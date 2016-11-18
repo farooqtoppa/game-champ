@@ -15,4 +15,4 @@
   }
 
 })() // ends IIFEE
-console.log('app.js');
+console.log('APP.js is connected');
