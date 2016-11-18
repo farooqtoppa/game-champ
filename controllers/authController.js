@@ -53,10 +53,22 @@ router.get('/', (req, res) => {
 // =================================
 // LOG OUT
 // =================================
-router.delete('/logout', function(req, res){
+router.delete('/logout', function(req, res) {
   req.logout();
   res.json({ status: 202, message: 'no content'});
 })
+
+// ==================================
+// CREDENTIAL CHECK
+// ==================================
+var authorize = function(req, res, next) {
+  if(!req.user || req.user._id != req.params.id) {
+    res.json(401, 'unauthorized')
+  }
+  else{
+    next()
+  }
+};
 
 
 
