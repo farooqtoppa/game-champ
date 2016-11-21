@@ -6,6 +6,7 @@
 
   function AuthController($http, $state, $scope, $user, $stateParams, Flash) {
 
+    // user
     this.user = null;
 
     // refers back to controller
@@ -28,7 +29,7 @@
       .then(function(response){
         console.log('res is', response);
         self.user = response.data.user;
-        $scope.$emit('Current user logged in', self.user);
+        $scope.$emit('UserLoggedIn', self.user);
       })
       .catch(function(error){
         console.log(error);
@@ -60,6 +61,7 @@
           console.log(response);
           self.loginMsg();
           self.user = response.data.user;
+          $scope.$emit('UserLoggedIn', self.user);
           $state.go('testing', {url: '/testing', user: response.data.user});
         //}
       })
@@ -75,6 +77,7 @@
       })
       .then(function(){
         self.logoutMsg();
+        $scope.$emit('UserLoggedOut');
         console.log('logged out');
         self.user = null;
         $state.go('testing', {url: '/index'});
@@ -86,7 +89,7 @@
 
     this.changePassword = function(password){
       if(password.password === password.passwordConfirm) {
-        $http.patch('/api/users/${self.user._id}/reset',
+        $http.patch(`/api/users/${self.user._id}/reset`,
         {
           password: password.password
         })
