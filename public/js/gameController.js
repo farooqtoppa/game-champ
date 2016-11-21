@@ -2,9 +2,9 @@
   angular.module('GameChamp')
   .controller('GameController', GameController);
 
-  GameController.$inject = ['$http', '$state'];
+  GameController.$inject = ['$http', '$state', '$cart', '$scope'];
 
-  function GameController($http, $state) {
+  function GameController($http, $state, $cart, $scope) {
     // refers back to controller
     var self = this;
 
