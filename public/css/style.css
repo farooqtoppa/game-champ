@@ -7,7 +7,6 @@ body {
   padding: 40px 0px 0px 0px;
   color: white;
   font-size: 3em;
-
 }
 
 #navbar {
@@ -31,14 +30,18 @@ body {
 #header, #navbar, #body, #footer {
   margin-left: 10%;
   margin-right: 10%;
-
-
 }
 
 #formedit {
-
   margin-top: 20px;
 }
+
+.labels{
+  background: maroon;
+  color: white;
+
+}
+
 
 @viewport{
   zoom: 1.0;
