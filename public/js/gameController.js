@@ -11,7 +11,7 @@
     //=================================
     // ALL PRODUCTS FROM DB
     // ================================
-    this.getAllProducts = function() {
+    this.getProducts = function() {
       $http.get('/api/products')
       .catch(function(error){
         console.log(error);
