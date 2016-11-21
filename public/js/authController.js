@@ -2,9 +2,9 @@
   angular.module('GameChamp')
   .controller('AuthController', AuthController);
 
-  AuthController.$inject = ['$http', '$state','$scope', '$user', 'Flash'];
+  AuthController.$inject = ['$http', '$state','$scope', '$user', '$stateParams', 'Flash'];
 
-  function AuthController($http, $state, $scope, $user, Flash) {
+  function AuthController($http, $state, $scope, $user, $stateParams, Flash) {
 
     this.user = null;
 
@@ -28,6 +28,7 @@
       .then(function(response){
         console.log('res is', response);
         self.user = response.data.user;
+        $scope.$emit('Current user logged in', self.user);
       })
       .catch(function(error){
         console.log(error);
