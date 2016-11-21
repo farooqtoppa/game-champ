@@ -126,8 +126,24 @@
       });
     } // ends deleteFromCart
 
+    this.getOrders = function() {
+      $http.get(`/api/orders/${self.user._id}`,{
+        user: self.user
+      })
+      .catch(function(error){
+        console.log(error);
+      })
+      .then(function(response){
+        return self.orders = response.data;
+      })
+      .then(function(orders){
+        $state.go('orders',{url: '/orders'});
+      });
+    } // ends getOrders
+    this.getProducts('','name');
+
   } // ends GameController
 
-})()
+})() // ends IIFEE
 
 console.log('GameController is connected');
