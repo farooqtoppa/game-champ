@@ -11,7 +11,7 @@ body {
 
 #navbar {
   min-height: 40px;
-  background-color: #999999;
+  background-color: grey;
   padding: 20px 0px 0px 0px
 }
 
@@ -52,6 +52,7 @@ body {
 
 a{
   padding: 30px;
+  color: white;
 }
 
 #flash{

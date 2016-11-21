@@ -64,23 +64,47 @@
       })
     }
 
+    // ================================
+    // LOGOUT
+    // ================================
+    this.logout = function() {
+      $http.delete('/api/users/logout')
+      .then(function(response){
+        console.log(response);
+      })
+      .then(function(){
+        self.logoutMsg();
+        console.log('logged out');
+        self.user = null;
+        $state.go('testing', {url: '/index'});
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+    }
+
     // =====================================
     // FLASH MESSAGES
     // =====================================
     this.signupMsg = function() {
       var msg = 'You have successfully signed up. Please enter username and password';
       Flash.create('signup', msg);
-    };
+    }
 
     this.loginMsg = function() {
       var msg = 'You have logged in successfully';
       console.log(msg);
       Flash.create('login', msg);
-    };
+    }
 
     this.errMsg = function() {
       var msg = 'Username and password dont match. Please try again.'
       Flash.create('err', msg);
+    }
+
+    this.logoutMsg = function() {
+      var msg = 'You have logged out.'
+      Flash.create('logout', msg);
     }
 
 
