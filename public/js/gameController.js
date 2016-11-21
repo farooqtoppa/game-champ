@@ -112,6 +112,20 @@
       self.quantityAtCartIndex[index] = 0;
     } // ends updateCart
 
+    this.deleteFromCart = function(index){
+      self.cart.splice(index,1);
+    } // ends deleteFromCart
+
+    this.placeOrder = function(order,user){
+      this.existingOrders = true;
+      $http.post(`/api/orders`, {order: order, user: user})
+      .then(function(response){
+        self.cart = [];
+        self.getOrders();
+        $state.go('orders', {url: '/orders'});
+      });
+    } // ends deleteFromCart
+
   } // ends GameController
 
 })()
