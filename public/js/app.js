@@ -20,10 +20,10 @@
       url: '/login',
       templateUrl: '../partials/login.html'
     })
-    .state('testing',{
-      url: '/testing',
-      templateUrl: '../partials/testing.html'
-    });
+    .state('home',{
+      url: '/home',
+      templateUrl: '../partials/home.html'
+    })
 
 
   } // ends MainRouter
