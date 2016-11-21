@@ -2,9 +2,9 @@
   angular.module('GameChamp')
   .controller('AuthController', AuthController);
 
-  AuthController.$inject = ['$http', '$state', '$scope', 'Flash'];
+  AuthController.$inject = ['$http', '$state','$scope', '$user', 'Flash'];
 
-  function AuthController($http, $state, $scope, Flash) {
+  function AuthController($http, $state, $scope, $user, Flash) {
 
     this.user = null;
 
