@@ -75,7 +75,37 @@
       .catch(function(error){
         console.log(error);
       });
-    }
+    } // ends getProducts
+
+    this.addToCart = function(id, quantity, index){
+      if (!quantity) {
+        $state.go('home', {url: '/home'})
+        .catch(function(error){
+          console.log(error);
+        });
+      } else {
+        this.cartHasItems = true;
+        var indexOfProductInCart = -1;
+        if (self.cart.length > 0) { // if cart is not empty, check to see if product is already in cart
+          indexOfProductInCart = self.cart.findIndex(function(el,i) {
+            return el.product._id === id;
+          });
+        }
+        if (indexOfProductInCart === -1) {
+          $http.get(`/api/products/${id}`)
+          .catch(function(error){
+            console.log(error);
+          })
+          .then(function(response){
+            self.cart.push({product: response.data, quantity: Number(quantity)})
+            console.log(self.cart);
+          });
+        } else {
+          self.cart[indexOfProductInCart].quantity += Number(quantity);
+        }
+        self.quantityAtShopIndex[index] = 0;
+      }
+    } // ends addToCart
 
   } // ends GameController
 
