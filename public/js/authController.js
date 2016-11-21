@@ -83,6 +83,23 @@
       });
     }
 
+    this.changePassword = function(password){
+      if(password.password === password.passwordConfirm) {
+        $http.patch('/api/users/${self.user._id}/reset',
+        {
+          password: password.password
+        })
+        .catch(function(error){
+          console.log(error);
+          $state.go('credentials');
+        })
+        .then(function(response){
+          console.log('password has been changed')
+          $state.go('index');
+        });
+      }
+    }
+
     // =====================================
     // FLASH MESSAGES
     // =====================================
