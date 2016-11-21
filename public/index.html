@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="/css/bootstrap.css">
+  <!--<link rel="stylesheet" href="/css/bootstrap.css">-->
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
@@ -18,14 +18,35 @@
 
 <body ng-controller="GameController as gameCtrl">
   <!--<a ng-click="gameCtrl.getAllProducts()" ui-sref="index">Products</a>-->
-  <div>
-    <nav class="nav-bar">
-      <a ui-sref-active="active" ui-sref="login">login</a>
-      <a ui-sref-active="active" ui-sref="signup">signup</a>
-      <a ng-click="gameCtrl.getAllProducts()" ui-sref="home">home</a>
-    </nav>
+
+  <!--HEADER -->
+  <div id="header">
+    <center>Game Champ</center>
   </div>
-  <main ui-view></main>
+
+  <!--NAVBAR-->
+  <div id="navbar">
+    <center>
+      <nav>
+          <a ui-sref-active="active" ui-sref="login">login</a>
+          <a ui-sref-active="active" ui-sref="signup">signup</a>
+          <a ng-click="gameCtrl.getAllProducts()" ui-sref="home">home</a>
+      </nav>
+    </center>
+  </div>
+
+  <!--BODY-->
+  <div id="body">
+    <center>
+      <main ui-view></main>
+    </center>
+  </div>
+
+  <div id="footer">
+    <center>Footer</center>
+  </div>
+
+
 </body>
 
 </html>
