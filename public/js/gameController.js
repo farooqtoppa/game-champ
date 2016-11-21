@@ -5,6 +5,7 @@
   GameController.$inject = ['$http', '$state'];
 
   function GameController($http, $state) {
+    // refers back to controller
     var self = this;
 
     //=================================
