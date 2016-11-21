@@ -138,4 +138,4 @@
 
 })(); // ends IIFEE
 
-console.log('authController.js')
+console.log('authController.js is connected')
