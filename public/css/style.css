@@ -1,3 +1,6 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 #header {
   min-height: 100px;
   background-color: maroon;
@@ -44,6 +47,10 @@
 @-ms-viewport {
   width: extend-to-zoom;
   zoom: 1.0;
+}
+
+a{
+  padding: 30px;
 }
 
 
