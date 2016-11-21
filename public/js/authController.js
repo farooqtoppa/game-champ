@@ -37,7 +37,7 @@
           $state.go('login', {url: '/login'});
       });
       console.log('sign up function called');
-    }
+    } // ends signup
 
     // ===================================
     // LOG IN
@@ -62,7 +62,7 @@
           $state.go('testing', {url: '/testing', user: response.data.user});
         //}
       })
-    }
+    } // ends login
 
     // ================================
     // LOGOUT
@@ -81,7 +81,7 @@
       .catch(function(error){
         console.log(error);
       });
-    }
+    } // ends logout
 
     this.changePassword = function(password){
       if(password.password === password.passwordConfirm) {
@@ -98,7 +98,7 @@
           $state.go('index');
         });
       }
-    }
+    } // ends changePassword
 
     // =====================================
     // FLASH MESSAGES
