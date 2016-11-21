@@ -2,15 +2,22 @@
   angular.module('GameChamp')
   .controller('AuthController', AuthController);
 
-  AuthController.$inject = ['$http', '$state'];
+  AuthController.$inject = ['$http', '$state', '$scope', 'Flash'];
 
-  function AuthController($http, $state) {
+  function AuthController($http, $state, $scope, Flash) {
 
     this.user = null;
 
     // refers back to controller
     var self = this;
 
+    // =====================================
+    // FLASH MESSAGES
+    // =====================================
+    this.signupSuccess = function() {
+      var message = 'You successfully signed up. Please log in!';
+      Flash.create('signup', message);
+    };
     // ===================================
     // SIGN UP
     // ===================================
@@ -32,19 +39,13 @@
         console.log(error);
       })
       .then(function(){
-        // self.signupMsg();
-        // $state.go('home', {url: '/home'});
+          self.signupSuccess();
+          $state.go('login', {url: '/login'});
       });
       console.log('sign up function called');
     }
 
-    // =====================================
-    // FLASH MESSAGES
-    // =====================================
-    this.signupMsg = function() {
-      var msg = 'You have successfully registered. Please log in!';
-      Flash.create('signup', msg);
-    }
+
 
   } // ends AuthController
 

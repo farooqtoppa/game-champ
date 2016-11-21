@@ -39,9 +39,7 @@ body {
 .labels{
   background: maroon;
   color: white;
-
 }
-
 
 @viewport{
   zoom: 1.0;
@@ -55,6 +53,12 @@ body {
 a{
   padding: 30px;
 }
+
+#flash{
+  color: red;
+  margin-top: 10px;
+}
+
 
 
 

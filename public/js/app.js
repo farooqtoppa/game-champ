@@ -1,5 +1,5 @@
 (function(){
-  angular.module('GameChamp', ['ui.router'])
+  angular.module('GameChamp', ['ui.router', 'ngFlash'])
   .config(MainRouter);
 
   function MainRouter($stateProvider, $urlRouterProvider, $locationProvider) {
