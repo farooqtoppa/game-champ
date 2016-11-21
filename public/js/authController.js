@@ -11,9 +11,9 @@
     // refers back to controller
     var self = this;
 
-    // ==============================
+    // ===================================
     // SIGN UP
-    // ===============================
+    // ===================================
     this.signup = function(userInfo) {
       $http.post('/api/users/signup',
       {
@@ -37,6 +37,14 @@
       });
       console.log('sign up function called');
     }
+
+    // =====================================
+    // FLASH MESSAGES
+    // =====================================
+    this.signupMsg = function() {
+      var msg = 'You have successfully registered. Please log in!';
+    }
+
   } // ends AuthController
 
 
