@@ -15,6 +15,10 @@
     .state('signup',{
       url: '/signup',
       templateUrl: '../partials/signup.html',
+    })
+    .state('login',{
+      url: '/login',
+      templateUrl: '../partials/login.html'
     });
 
 
