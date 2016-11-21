@@ -12,19 +12,20 @@
     // SIGN UP
     // ===============================
     this.signup = function(userInfo) {
-      $http.post('/api/users/signup',
-      {
-        username: userInfo.username,
-        password: userInfo.password
-      })
-      .catch(function(error){
-        console.log(error);
-        $state.go('signup', {url: '/signup'});
-      })
-      .then(function(response){
-        console.log('res is', response);
+      // $http.post('/api/users/signup',
+      // {
+      //   username: userInfo.username,
+      //   password: userInfo.password
+      // })
+      // .catch(function(error){
+      //   console.log(error);
+      //   $state.go('signup', {url: '/signup'});
+      // })
+      // .then(function(response){
+      //   console.log('res is', response);
 
-      })
+      // })
+      console.log('sign up function called');
     }
   } // ends AuthController
 

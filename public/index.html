@@ -21,34 +21,47 @@
 </head>
 
 <body ng-controller="GameController as gameCtrl">
+
   <!--<a ng-click="gameCtrl.getAllProducts()" ui-sref="index">Products</a>-->
 
-  <!--HEADER -->
-  <div id="header">
-    <center>Game Champ</center>
-  </div>
+  <div ng-controller="AuthController as authCtrl">
 
-  <!--NAVBAR-->
-  <div id="navbar">
-    <center>
-      <nav>
-          <a ui-sref-active="active" ui-sref="login">Login</a>
-          <a ui-sref-active="active" ui-sref="signup">Signup</a>
-          <a ng-click="gameCtrl.getAllProducts()" ui-sref="home">View Games</a>
-      </nav>
-    </center>
-  </div>
+    <!--HEADER -->
+      <div id="header">
+        <center>Game Champ</center>
+      </div>
+    <!-- ends HEADER-->
+
+    <!--NAVBAR-->
+      <div id="navbar">
+        <center>
+          <nav>
+              <a ui-sref-active="active" ui-sref="login">Login</a>
+              <a ui-sref-active="active" ui-sref="signup">Signup</a>
+              <a ng-click="gameCtrl.getAllProducts()" ui-sref="home">View Games</a>
+          </nav>
+        </center>
+      </div>
+    <!-- ends NAVBAR-->
+
+
 
   <!--BODY-->
-  <div id="body">
-    <center>
-      <main ui-view></main>
-    </center>
-  </div>
+    <div id="body">
+      <center>
+        <main ui-view></main>
+      </center>
+    </div>
+  <!-- ends BODY ID-->
 
+  </div> <!-- ends AuthController-->
+
+
+  <!--FOOTER-->
   <div id="footer">
     <center>@2016 GameShop</center>
   </div>
+  <!-- ends FOOTER-->
 
 
 </body>
