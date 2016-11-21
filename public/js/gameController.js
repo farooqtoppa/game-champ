@@ -107,6 +107,11 @@
       }
     } // ends addToCart
 
+    this.updateCart = function(newQuantity,index) {
+      self.cart[index].quantity = newQuantity;
+      self.quantityAtCartIndex[index] = 0;
+    } // ends updateCart
+
   } // ends GameController
 
 })()
