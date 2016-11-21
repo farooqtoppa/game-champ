@@ -62,7 +62,7 @@
           self.loginMsg();
           self.user = response.data.user;
           $scope.$emit('UserLoggedIn', self.user);
-          $state.go('testing', {url: '/testing', user: response.data.user});
+          $state.go('home', {url: '/home', user: response.data.user});
         //}
       })
     } // ends login
@@ -80,7 +80,7 @@
         $scope.$emit('UserLoggedOut');
         console.log('logged out');
         self.user = null;
-        $state.go('testing', {url: '/index'});
+        $state.go('index', {url: '/index'});
       })
       .catch(function(error){
         console.log(error);

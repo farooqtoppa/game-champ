@@ -37,6 +37,17 @@
     this.quantityAtCartIndex = {};
     this.cart = [];
 
+    // =================================
+    // CART TOTAL
+    // =================================
+    this.getCartTotal = function() {
+      var sum = 0;
+        this.cart.forEach(function(el){
+        sum += el.product.price * el.quantity;
+      });
+      return sum;
+    }
+
     //=================================
     // ALL PRODUCTS FROM DB
     // ================================
