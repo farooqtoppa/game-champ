@@ -52,10 +52,15 @@
         console.log(error);
       })
       .then(function(response){
-        console.log(response);
-        self.loginMsg();
-        self.user = response.data.user;
-        $state.go('testing', {url: '/testing', user: response.data.user});
+        //if(response.data == "Unauthorized") {
+         // self.signupMsg();
+        //}
+        //else{
+          console.log(response);
+          self.loginMsg();
+          self.user = response.data.user;
+          $state.go('testing', {url: '/testing', user: response.data.user});
+        //}
       })
     }
 
@@ -72,6 +77,11 @@
       console.log(msg);
       Flash.create('login', msg);
     };
+
+    this.errMsg = function() {
+      var msg = 'Username and password dont match. Please try again.'
+      Flash.create('err', msg);
+    }
 
 
 
