@@ -35,14 +35,29 @@
       </div>
     <!-- ends HEADER-->
 
-    <!--NAVBAR-->
-      <div id="navbar">
+     <!--NAVBAR AFTER USER LOG IN-->
+      <div id="navbar" ng-show="authCtrl.user">
+        <center>
+          <nav>
+              <a ui-sref="home">Products</a>
+              <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Orders</a>
+              <a ui-sref="password">change account info</a>
+              <a ng-click="authCtrl.logout()">Logout</a>
+              <a ui-sref="cart">Cart</a>
+              <!--<a ng-click="authCtrl.logout()" ui-sref="testing">Logout</a>-->
+          </nav>
+        </center>
+      </div>
+    <!-- ends NAVBAR-->
+
+    <!--NAVBAR AFTER USER LOG IN-->
+      <div id="navbar" ng-hide="authCtrl.user">
         <center>
           <nav>
               <a ui-sref-active="active" ui-sref="login">Login</a>
               <a ui-sref-active="active" ui-sref="signup">Signup</a>
               <a ng-click="gameCtrl.getProducts()" ui-sref="testing">View All Games</a>
-              <a ng-click="authCtrl.logout()" ui-sref="testing">Logout</a>
+              <!--<a ng-click="authCtrl.logout()" ui-sref="testing">Logout</a>-->
           </nav>
         </center>
       </div>
