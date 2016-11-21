@@ -10,13 +10,13 @@
     //=================================
     // ALL PRODUCTS FROM DB
     // ================================
-    this.getProducts = function() {
+    this.getAllProducts = function() {
       $http.get('/api/products')
       .catch(function(error){
         console.log(error);
       })
       .then(function(response){
-        console.log(response.data);
+        console.log('These are all of the products ',response.data.products);
       })
       .catch(function(error){
         console.log(error);

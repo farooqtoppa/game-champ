@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
 <html ng-app="GameChamp">
+
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
@@ -12,7 +15,17 @@
    <script src="js/gameController.js"></script>
 
 </head>
+
 <body ng-controller="GameController as gameCtrl">
-<a ng-click="gameCtrl.getProducts()" ui-sref="index">Products</a>
+  <!--<a ng-click="gameCtrl.getAllProducts()" ui-sref="index">Products</a>-->
+  <div>
+    <nav class="nav-bar">
+      <a ui-sref-active="active" ui-sref="login">Login</a>
+      <a ui-sref-active="active" ui-sref="login">Sign Up</a>
+      <a ng-click="gameCtrl.getAllProducts()" ui-sref="home">Games</a>
+    </nav>
+  </div>
+
 </body>
+
 </html>
