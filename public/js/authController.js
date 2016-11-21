@@ -43,6 +43,7 @@
     // =====================================
     this.signupMsg = function() {
       var msg = 'You have successfully registered. Please log in!';
+      Flash.create('signup', msg);
     }
 
   } // ends AuthController
