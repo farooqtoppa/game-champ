@@ -11,8 +11,14 @@
       params: {
         user: null
       },
+    })
+    .state('signup',{
+      url: '/signup',
+      templateUrl: '../partials/signup.html',
     });
-  }
+
+
+  } // ends MainRouter
 
 })() // ends IIFEE
 console.log('APP.js is connected');
