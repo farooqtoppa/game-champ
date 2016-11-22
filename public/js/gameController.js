@@ -118,6 +118,7 @@
 
     this.deleteFromCart = function(index){
       self.cart.splice(index,1);
+      self.deleteFromMsg();
     } // ends deleteFromCart
 
     this.placeOrder = function(order,user){
@@ -162,6 +163,11 @@
     this.updateCartMsg = function() {
       var msg = 'Cart has been updated.'
       Flash.create('cartupd', msg);
+    }
+
+    this.deleteFromMsg = function() {
+      var msg = 'Item has been deleted from your cart'
+      Flash.create('deleteFrom', msg);
     }
 
   } // ends GameController

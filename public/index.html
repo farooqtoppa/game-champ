@@ -33,10 +33,9 @@
             <!-- shows when user is logged in-->
             <div ng-show="authCtrl.user">
               <nav class="index-nav">
-                <a ui-sref="cart">Shopping Cart</a>
-                <a ui-sref="home">Products</a>
-                <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Orders</a>
-                <a ui-sref="credentials">Change Password</a>
+                <a ui-sref="cart">My Cart</a>
+                <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Order History</a>
+                <a ui-sref="credentials">Change My Password</a>
                 <a ng-click="authCtrl.logout()">Logout</a>
               </nav>
             </div>
@@ -45,10 +44,10 @@
               <nav class="index-nav">
                 <a ui-sref-active="active" ui-sref="login">Login</a>
                 <a ui-sref-active="active" ui-sref="signup">Sign Up</a>
-                <a ng-click="gameCtrl.getProducts('','name')"i-sref-active="active" ui-sref="home">Products</a>
               </nav>
             </div><br><br>
             <div class="col-sm-10 col-sm-offset-1 text-center">
+              <a ng-click="gameCtrl.getProducts('','name')"i-sref-active="active" ui-sref="home">All Categories</a>
               <a ng-click="gameCtrl.getProducts('xboxone','category')" ui-sref-active="active" ui-sref="home">Xbox One</a>
               <a ng-click="gameCtrl.getProducts('ps4','category')" ui-sref-active="active" ui-sref="home">PS4</a>
                <a ng-click="gameCtrl.getProducts('xbox360','category')" ui-sref-active="active" ui-sref="home">Xbox 360</a>
