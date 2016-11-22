@@ -2,8 +2,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .jumbotron {
-  background: red;
-  color: white;
+
+
+  background-image: url("http://web-vassets.ea.com/Assets/Resources/www/ea.com/Image/FIFA13_background_1366x850.jpg?cb=1348541402");
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -20,15 +23,22 @@ a:hover {
   margin: 15px;
   text-decoration: none;
 }
+.console-links{
+  margin: 0px 50px 0px 50px;
+}
 
 .page-header {
   font-family: monospace;
-  font-weight: 700;
+  font-weight: 900;
 }
 #flash{
-  color: red;
+  color: maroon;
   margin-top: 10px;
+  font-size: 1.2em;
 }
+
+
+
 
 #button {
   background: maroon;
