@@ -98,6 +98,7 @@
           })
           .then(function(response){
             self.cart.push({product: response.data, quantity: Number(quantity)})
+            $state.go('cart', {url: '/cart'});
             self.addToCartMsg();
             console.log(self.cart);
           });
