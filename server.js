@@ -14,7 +14,7 @@ var app             = express();
 mongoose.Promise = global.Promise;
 
 // create connection to store app db
-var mongoURI =  process.env.MONGODB_URI || 'mongodb://localhost/storeapp';
+var mongoURI =  process.env.MONGODB_URI || 'mongodb://localhost/gameapp';
 mongoose.connect(mongoURI);
 
 // Access User Model
