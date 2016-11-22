@@ -23,76 +23,51 @@
 
 </head>
 
-<body ng-controller="GameController as gameCtrl">
+  <body ng-controller="GameController as gameCtrl">
+    <!-- header-section -->
+      <div ng-controller="AuthController as authCtrl" class="container-fluid header-section">
 
-  <!--<a ng-click="gameCtrl.getAllProducts()" ui-sref="index">Products</a>-->
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <h1 class="text-uppercase name">game champ</h1>
+          </div>
+        </div><hr>
 
-  <div ng-controller="AuthController as authCtrl">
+        <div ng-show="authCtrl.user" class="col-md-12 text-center">
+            <a ui-sref="cart"><span class="links">Cart</span></a>
+            <a ui-sref="home"><span class="links">Products</span></a>
+            <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Orders<span class="links"></span>Orders</a>
+            <a ui-sref="password"><span class="links">Password</span></a>
+            <a ng-click="authCtrl.logout()">Logout</a>
+        </div>
+        <div ng-hide="authCtrl.user" class="col-md-12 text-center">
+            <a ui-sref-active="active" ui-sref="login"><span class="links">Login</span></a>
+            <a ui-sref-active="active" ui-sref="signup"><span class="links">Sign Up</span></a>
+            <a ng-click="gameCtrl.getProducts('', 'name')" ui-sref="home">Products<span class="links"></span>Products</a>
 
-    <!--HEADER -->
-      <div id="header">
-        <center>Game Champ</center>
-      </div>
-    <!-- ends HEADER-->
-
-     <!--NAVBAR AFTER USER LOG IN-->
-      <div id="navbar" ng-show="authCtrl.user">
-        <center>
-          <nav>
-              <a ui-sref="home">Products</a>
-              <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Orders</a>
-              <a ui-sref="password">change account info</a>
-              <a ng-click="authCtrl.logout()">Logout</a>
-              <a ui-sref="cart">Cart</a>
-              <!--<a ng-click="authCtrl.logout()" ui-sref="testing">Logout</a>-->
-          </nav>
-        </center>
-      </div>
-    <!-- ends NAVBAR-->
-
-    <!--NAVBAR AFTER USER LOG IN-->
-      <div id="navbar" ng-hide="authCtrl.user">
-        <center>
-          <nav>
-              <a ui-sref-active="active" ui-sref="login">Login</a>
-              <a ui-sref-active="active" ui-sref="signup">Signup</a>
-              <a ng-click="gameCtrl.getProducts()" ui-sref="home">View All Games</a>
-              <!--<a ng-click="authCtrl.logout()" ui-sref="testing">Logout</a>-->
-          </nav>
-        </center>
-      </div>
-    <!-- ends NAVBAR-->
-
-    <!-- FlASH MSGS -->
-      <div id="flash">
-        <center>
-        <flash-message
-          duration="2000"
-          show-close="false"
-          on-dismiss="myCallback(flash)"
-        ></flash-message>
-        </center>
-      </div>
-    <!-- ends FlASH MSGS -->
-
-    <!--BODY-->
-      <div id="body">
-
-          <main ui-view></main>
+        </div>
 
       </div>
-    <!-- ends BODY ID-->
-
-  </div> <!-- ends AuthController-->
+    <!-- ends header-section -->
 
 
-  <!--FOOTER-->
-  <div id="footer">
-    <center>@2016 GameShop</center>
-  </div>
-  <!-- ends FOOTER-->
 
 
-</body>
+
+      <!-- FlASH MSGS -->
+        <div id="flash">
+          <center>
+          <flash-message
+            duration="2000"
+            show-close="false"
+            on-dismiss="myCallback(flash)"
+          ></flash-message>
+          </center>
+        </div>
+      <!-- ends FlASH MSGS -->
+
+  </body>
 
 </html>

@@ -1,58 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-#header {
-  min-height: 100px;
-  background-color: maroon;
-  padding: 40px 0px 0px 0px;
-  color: white;
-  font-size: 3em;
-}
-
-#navbar {
-  min-height: 40px;
-  background-color: grey;
-  padding: 20px 0px 0px 0px
-}
-
-#body {
-  min-height: 400px;
-  margin-top: 3%;
-}
-
-#footer {
-  min-height:  100px;
-  margin-top: 3%;
-
-}
-
-#header, #navbar, #body, #footer {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-#formedit {
-  margin-top: 20px;
-}
-
-.labels{
-  background: maroon;
-  color: white;
-}
-
-@viewport{
-  zoom: 1.0;
-  width: extend-to-zoom;
-}
-@-ms-viewport {
-  width: extend-to-zoom;
-  zoom: 1.0;
-}
-
-a{
-  padding: 30px;
-  color: white;
-}
 
 #flash{
   color: red;
