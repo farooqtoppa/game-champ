@@ -2,9 +2,9 @@
   angular.module('GameChamp')
   .controller('GameController', GameController);
 
-  GameController.$inject = ['$http', '$state', '$cart', '$scope'];
+  GameController.$inject = ['$http', '$state', '$cart', '$scope', 'Flash'];
 
-  function GameController($http, $state, $cart, $scope) {
+  function GameController($http, $state, $cart, $scope, Flash) {
 
     this.all = [];
 
@@ -98,6 +98,7 @@
           })
           .then(function(response){
             self.cart.push({product: response.data, quantity: Number(quantity)})
+            self.addToCartMsg();
             console.log(self.cart);
           });
         } else {
@@ -141,6 +142,11 @@
       });
     } // ends getOrders
     this.getProducts('','name');
+
+    this.addToCartMsg = function() {
+      var msg = 'Item added to your cart';
+      Flash.create('addToCart', msg);
+    }
 
   } // ends GameController
 

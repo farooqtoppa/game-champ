@@ -35,7 +35,7 @@
               <nav class="index-nav">
                 <a ui-sref="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a ui-sref="home">Products</a>
-                <a ng-click="storeCtrl.getOrders()" ui-sref="orders">Orders</a>
+                <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Orders</a>
                 <a ui-sref="credentials">{{authCtrl.user.username}}'s password</a>
                 <a ng-click="authCtrl.logout()">Logout</a>
               </nav>
@@ -45,7 +45,7 @@
               <nav class="index-nav">
                 <a ui-sref-active="active" ui-sref="login">Login</a>
                 <a ui-sref-active="active" ui-sref="signup">Sign Up</a>
-                <a ng-click="storeCtrl.getProducts('','name')"i-sref-active="active" ui-sref="home">Products</a>
+                <a ng-click="gameCtrl.getProducts('','name')"i-sref-active="active" ui-sref="home">Products</a>
               </nav>
             </div><br><br>
             <div class="col-sm-10 col-sm-offset-1 text-center">
@@ -58,7 +58,12 @@
               <a ng-click="gameCtrl.getProducts('wiiu','category')" ui-sref-active="active" ui-sref="home">Wii U</a>
               <a ng-click="gameCtrl.getProducts('consoles','category')" ui-sref-active="active" ui-sref="home">Consoles</a>
             </div>
-        </header>
+        </header><br>
+        <center>
+    <h4 ng-hide="authCtrl.user" id="rdmsg">
+      Please log in to make a purchase from us.
+    </h4>
+  </center>
 
       <!-- ends header -->
       <div id="flash">

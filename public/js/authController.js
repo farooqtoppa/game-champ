@@ -113,7 +113,7 @@
     }
 
     this.loginMsg = function() {
-      var msg = 'You have logged in successfully';
+      var msg = 'You have logged in successfully and can shop now!';
       console.log(msg);
       Flash.create('login', msg);
     }

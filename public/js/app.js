@@ -27,6 +27,10 @@
     .state('cart',{
       url: '/cart',
       templateUrl: '../partials/cart.html'
+    })
+    .state('orders',{
+      url: '/orders',
+      templateUrl: '../partials/orders.html'
     });
 
 

@@ -6,7 +6,7 @@ body {
   color: maroon;
 }
 #rdmsg{
-  color: red;
+  color: maroon;
 }
 
 header {
@@ -16,11 +16,14 @@ header {
 a {
   margin: 15px;
   color: maroon;
+  text-decoration: underline;
 }
 
 a:hover {
   margin: 15px;
   text-decoration: none;
+  background: white;
+  color: grey;
 }
 .console-links{
   margin: 0px 50px 0px 50px;
@@ -36,12 +39,22 @@ a:hover {
   font-size: 1.2em;
 }
 
-
-
+.price {
+  color: maroon;
+}
 
 #button {
   background: maroon;
   border: 2px solid white;
+}
+
+#order-text {
+  color: maroon;
+}
+
+details {
+  background: lightgrey;
+  font-weight: bold;
 }
 
 
