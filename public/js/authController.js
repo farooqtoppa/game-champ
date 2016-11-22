@@ -99,7 +99,8 @@
         })
         .then(function(response){
           console.log('password has been changed')
-          $state.go('index');
+          self.changePasswordMsg();
+          $state.go('home');
         });
       }
     } // ends changePassword
@@ -126,6 +127,11 @@
     this.logoutMsg = function() {
       var msg = 'You have logged out.'
       Flash.create('logout', msg);
+    }
+
+    this.changePasswordMsg = function() {
+      var msg = 'Password has been changed.'
+      Flash.create('pass', msg);
     }
 
 
