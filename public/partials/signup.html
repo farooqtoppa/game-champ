@@ -1,21 +1,31 @@
-<form ng-submit ="authCtrl.signup(userInfo)" class="pure-form pure-form-aligned">
-    <fieldset>
-        <div class="pure-control-group">
-            <label for="username">Username</label>
-            <input ng-model="userInfo.username" id="name" required="true" type="username" placeholder="username">
-        </div>
+<br>
 
-        <div class="pure-control-group">
-            <label for="password">Password</label>
-            <input ng-model="userInfo.password" id="password" required="true" type="password" placeholder="Password">
+<div class="container">
+  <form ng-submit="authCtrl.signup(userInfo)">
+    <div class="form-group">
+    <div class="row">
+      <label for="username" class="col-sm-3 col-sm-offset-3">Username</label>
+    </div>
+    <div class="row bottom-margin">
+      <div class="col-sm-5 col-sm-offset-3">
+        <input ng-model="userInfo.username" type="username" class="form-control" placeholder="username">
+      </div>
+    </div>
+    <div class="row">
+      <label for="password" class="col-sm-3 col-sm-offset-3">Password</label>
+    </div>
+    <div class="row bottom-margin">
+      <div class="col-sm-5 col-sm-offset-3">
+        <input ng-model="userInfo.password" type="password" class="form-control" placeholder="password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-offset-5">
+          <button type="submit" class="btn btn-primary btn-lg">Sign Up!</button>
         </div>
+      </div>
+    </div>
+  </form>
 
-        <div class="pure-controls">
-            <label for="cb" class="pure-checkbox">
-                <input id="cb" required="true" type="checkbox"> I've read the terms and conditions
-            </label><br>
-
-            <button type="submit" class="pure-button pure-button-primary">Sign Up!</button>
-        </div>
-    </fieldset>
-</form>
+</div>
