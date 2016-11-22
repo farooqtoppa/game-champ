@@ -51,6 +51,15 @@
         </header>
       <!-- ends header -->
 
+       <div class="col-sm-10 col-sm-offset-1 text-center">
+        <a ng-click="gameCtrl.getProducts('xboxone','category')" ui-sref-active="active" ui-sref="home">Xbox One</a>
+        <a ng-click="gameCtrl.getProducts('ps4','category')" ui-sref-active="active" ui-sref="home">PS4</a>
+         <a ng-click="gameCtrl.getProducts('xbox360','category')" ui-sref-active="active" ui-sref="home">Xbox 360</a>
+        <!--<a ng-click="gameCtrl.getProducts'xbox360','category')" ui-sref-active="active" ui-sref="home">XBox 360</a>-->
+        <a ng-click="gameCtrl.getProducts('ps3','category')" ui-sref-active="active" ui-sref="home">PS3</a>
+        <a ng-click="gameCtrl.getProducts('pc','category')" ui-sref-active="active" ui-sref="home">PC</a>
+        <a ng-click="gameCtrl.getProducts('wiiu','category')" ui-sref-active="active" ui-sref="home">Wii U</a>
+      </div>
 
 
 
@@ -65,7 +74,7 @@
           ></flash-message>
           </center>
         </div>
-
+    <br><br><br>
     <main ui-view>
     </main>
   </body>
