@@ -1,29 +1,32 @@
-<h3> CART </h3>
+<center>
+  <h3 id="order-text"> CART </h3>
 
-<div id="cart">
-  <h4>Total ({{storeCtrl.cart.length}} {{storeCtrl.cart.length === 1? "item" : "items"}}):</h4>
-    <h4>{{storeCtrl.getCartTotal() | currency}}</h4>
+  <div id="cart">
+    <h4>Total ({{storeCtrl.cart.length}} {{storeCtrl.cart.length === 1? "item" : "items"}}):</h4>
+      <h4>{{storeCtrl.getCartTotal() | currency}}</h4>
 
-  <div ng-repeat="orderItem in gameCtrl.cart">
-    <h5>{{orderItem.product.name}}</h5>
-    <p>Price: {{orderItem.product.price | currency}}</p>
-    <p>Quantity: {{orderItem.quantity}}</p>
-    <div ng-if="authCtrl.user">
-      <form ng-submit="gameCtrl.updateCart(gameCtrl.quantityAtCartIndex[$index],$index)">
-        <label for="quantity">Quantity</label>
-        <select name="quantity" ng-model="gameCtrl.quantityAtCartIndex[$index]">
-          <option ng-repeat="num in [1,2,3,4,5,6,7,8,9,10]" value="{{num}}">{{num}}</option>
-        </select>
-        <input type='submit' value="Update Cart">
-      </form>
-      <form ng-submit="gameCtrl.deleteFromCart($index)">
-        <input type="submit" value="Delete from cart">
-      </form>
-    </div>
+    <div ng-repeat="orderItem in gameCtrl.cart">
+      <h5>{{orderItem.product.name}}</h5>
+      <p>Price: {{orderItem.product.price | currency}}</p>
+      <p>Quantity: {{orderItem.quantity}}</p>
+      <div ng-if="authCtrl.user">
+        <form ng-submit="gameCtrl.updateCart(gameCtrl.quantityAtCartIndex[$index],$index)">
+          <label for="quantity">Quantity</label>
+          <select name="quantity" ng-model="gameCtrl.quantityAtCartIndex[$index]">
+            <option ng-repeat="num in [1,2,3,4,5,6,7,8,9,10]" value="{{num}}">{{num}}</option>
+          </select>
+          <input type='submit' value="Update Cart"><br>
+        </form>
+        <form ng-submit="gameCtrl.deleteFromCart($index)"><br>
+          <input type="submit" value="Delete from cart">
+        </form>
+      </div>
+    </div><br>
+
+
+
+    <form ng-submit="gameCtrl.placeOrder(gameCtrl.cart,authCtrl.user)" ng-show="gameCtrl.cart.length">
+      <input type="submit" value="Place Order">
+    </form>
   </div>
-
-
-  <form ng-submit="gameCtrl.placeOrder(gameCtrl.cart,authCtrl.user)" ng-show="gameCtrl.cart.length">
-    <input type="submit" value="Place Order">
-  </form>
-</div>
+</center>

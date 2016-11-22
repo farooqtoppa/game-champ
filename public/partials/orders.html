@@ -3,7 +3,7 @@
   <div id="cart">
     <details ng-repeat="order in gameCtrl.orders">
       <summary>Order # {{order._id}}{{order.createdAt | date:"MM/dd/yyyy 'at' h:mma"}}</summary>
-      {{order.total | currency}}
+      Order Total:{{order.total | currency}}
       <div>
         <div ng-repeat="item in order.items">
           {{item.quantity}} copies of {{item.product.name}} @ {{item.product.price | currency}}
