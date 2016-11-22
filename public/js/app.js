@@ -3,7 +3,7 @@
   .config(MainRouter);
 
   function MainRouter($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider.otherwise('/index');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
     .state('index', {

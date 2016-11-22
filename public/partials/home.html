@@ -1,5 +1,9 @@
 <br>
-
+  <center>
+    <h4 id="rdmsg">
+      Remember you must be signed in order to purchase from us. If you are logged in please ignore this message. Thanks and have fun shopping : )
+    </h4>
+  </center><br><br>
 <section>
 
   <div ng-repeat="product in gameCtrl.all">
@@ -12,6 +16,15 @@
         <h4>{{product.name}}</h4>
         <h5>{{product.price | currency}}</h5>
         <p>{{product.description}}</p>
+        <div ng-if="authCtrl.user">
+          <form ng-submit="gameCtrl.addToCart(product._id, gameCtrl.quantityAtShopIndex[$index],$index)">
+              <label for="quantity">Quantity</label>
+              <select name="quantity" ng-model="gameCtrl.quantityAtShopIndex[$index]">
+                <option ng-repeat="num in [1,2,3,4,5,6,7,8,9,10]" value="{{num}}">{{num}}</option>
+              </select>
+              <input type='submit' value="Add to Cart">
+          </form>
+        </div>
 
     </div>
 </section>
