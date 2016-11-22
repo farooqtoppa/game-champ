@@ -1,11 +1,12 @@
-<h1>Welcome</h1>
 
-<!--<div ng-repeat="product in gameCtrl.all">
+<section>
+  <div ng-repeat="product in gameCtrl.all">
+    <div class=" row row-eq-height">
+      <div class="col-xs-6 col-md-6"> <img ng-src={{product.imageurl}}.jpg class="img-thumbnail">
+      </div>
+    </div>
+</section>
 
 
-    <img ng-src= {{product.imageurl}}.jpg>
-    <h4>{{product.name}}</h4>
-    <h5>{{product.price | currency}}</h5>
-    <p>{{product.description}}</p>
 
-</div>-->
+
