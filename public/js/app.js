@@ -24,6 +24,10 @@
       url: '/home',
       templateUrl: '../partials/home.html'
     })
+    .state('cart',{
+      url: '/cart',
+      templateUrl: '../partials/cart.html'
+    });
 
 
   } // ends MainRouter

@@ -2,11 +2,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .jumbotron {
-
-  background-image: url("http://web-vassets.ea.com/Assets/Resources/www/ea.com/Image/FIFA13_background_1366x850.jpg?cb=1348541402");
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background: lightgrey;
+  color: maroon;
 }
 #rdmsg{
   color: red;
@@ -18,7 +15,7 @@ header {
 
 a {
   margin: 15px;
-  color: white;
+  color: maroon;
 }
 
 a:hover {
