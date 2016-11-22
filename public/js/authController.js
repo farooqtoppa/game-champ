@@ -52,17 +52,21 @@
       })
       .catch(function(error){
         console.log(error);
+        self.errMsg();
       })
       .then(function(response){
         //if(response.data == "Unauthorized") {
          // self.signupMsg();
         //}
         //else{
-          console.log(response);
-          self.loginMsg();
-          self.user = response.data.user;
-          $scope.$emit('UserLoggedIn', self.user);
-          $state.go('home', {url: '/home', user: response.data.user});
+
+          if (self.user = response.data.user) {
+            console.log(response);
+            self.loginMsg();
+            $scope.$emit('UserLoggedIn', self.user);
+            $state.go('home', {url: '/home', user: response.data.user});
+          }
+
         //}
       })
     } // ends login
