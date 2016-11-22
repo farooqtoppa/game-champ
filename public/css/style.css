@@ -30,6 +30,11 @@ a:hover {
   margin-top: 10px;
 }
 
+#button {
+  background: maroon;
+  border: 2px solid white;
+}
+
 
 
 
