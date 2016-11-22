@@ -31,6 +31,10 @@
     .state('orders',{
       url: '/orders',
       templateUrl: '../partials/orders.html'
+    })
+    .state('credentials',{
+      url: '/credentials',
+      templateUrl: '../partials/credentials.html'
     });
 
 

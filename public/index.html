@@ -33,10 +33,10 @@
             <!-- shows when user is logged in-->
             <div ng-show="authCtrl.user">
               <nav class="index-nav">
-                <a ui-sref="cart"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a ui-sref="cart">Shopping Cart</a>
                 <a ui-sref="home">Products</a>
                 <a ng-click="gameCtrl.getOrders()" ui-sref="orders">Orders</a>
-                <a ui-sref="credentials">{{authCtrl.user.username}}'s password</a>
+                <a ui-sref="credentials">Edit Account</a>
                 <a ng-click="authCtrl.logout()">Logout</a>
               </nav>
             </div>

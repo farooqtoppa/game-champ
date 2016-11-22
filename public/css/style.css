@@ -2,7 +2,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .jumbotron {
-  background: lightgrey;
+  background: #f6f6f6;
   color: maroon;
 }
 #rdmsg{
@@ -16,7 +16,6 @@ header {
 a {
   margin: 15px;
   color: maroon;
-  text-decoration: underline;
 }
 
 a:hover {
