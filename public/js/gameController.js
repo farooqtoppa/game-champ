@@ -113,6 +113,7 @@
     this.updateCart = function(newQuantity,index) {
       self.cart[index].quantity = newQuantity;
       self.quantityAtCartIndex[index] = 0;
+      self.updateCartMsg();
     } // ends updateCart
 
     this.deleteFromCart = function(index){
@@ -156,6 +157,11 @@
     this.quantityMsg = function() {
       var msg = 'Please select quantity in order to add item.'
       Flash.create('quantity', msg);
+    }
+
+    this.updateCartMsg = function() {
+      var msg = 'Cart has been updated.'
+      Flash.create('cartupd', msg);
     }
 
   } // ends GameController
