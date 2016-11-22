@@ -2,17 +2,17 @@
     <fieldset>
         <div class="pure-control-group">
             <label for="username">Username</label>
-            <input ng-model="userInfo.username" id="name" type="username" placeholder="username">
+            <input ng-model="userInfo.username" id="name" required="true" type="username" placeholder="username">
         </div>
 
         <div class="pure-control-group">
             <label for="password">Password</label>
-            <input ng-model="userInfo.password" id="password" type="password" placeholder="Password">
+            <input ng-model="userInfo.password" id="password" required="true" type="password" placeholder="Password">
         </div>
 
         <div class="pure-controls">
             <label for="cb" class="pure-checkbox">
-                <input id="cb" type="checkbox"> I've read the terms and conditions
+                <input id="cb" required="true" type="checkbox"> I've read the terms and conditions
             </label><br>
 
             <button type="submit" class="pure-button pure-button-primary">Sign Up!</button>
