@@ -2,8 +2,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .jumbotron {
-  background: white;
-  color: maroon;
+  background: red;
+  color: white;
 
 }
 
@@ -13,7 +13,7 @@ header {
 
 a {
   margin: 15px;
-  color: maroon
+  color: white;
 }
 
 a:hover {
