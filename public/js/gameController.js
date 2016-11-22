@@ -79,6 +79,7 @@
 
     this.addToCart = function(id, quantity, index){
       if (!quantity) {
+        self.quantityMsg();
         $state.go('home', {url: '/home'})
         .catch(function(error){
           console.log(error);
@@ -144,9 +145,17 @@
     } // ends getOrders
     this.getProducts('','name');
 
+    // ==============================
+    //FLASH MSG
+    // ==============================
     this.addToCartMsg = function() {
       var msg = 'Item added to your cart';
       Flash.create('addToCart', msg);
+    }
+
+    this.quantityMsg = function() {
+      var msg = 'Please select quantity in order to add item.'
+      Flash.create('quantity', msg);
     }
 
   } // ends GameController
