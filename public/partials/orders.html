@@ -1,4 +1,4 @@
-<center>
+<!--<center>
   <h3 id="order-text"> Your Order History </h3><br>
   <div id="cart">
     <details ng-repeat="order in gameCtrl.orders">
@@ -11,4 +11,50 @@
       </div>
     </details>
   </div>
+</center>-->
+
+<center>
+<h4 id="order-text"> Your Order History </h4>
+<h4 id="order-text">Click order number to see more details</h4><br>
+<details ng-repeat="order in gameCtrl.orders">
+    <summary>{{order._id}}</summary>
+    <table>
+        <tr>
+            <th scope="row">Date</th>
+            <td>#{{order.createdAt | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Customer</th>
+            <td>#{{order.user.username}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>#{{order.total | currency}}</td>
+        </tr>
+        <tr ng-repeat="item in order.items">
+            <th scope="row">Item</th>
+            <td>#{{item.product.name}}</td>
+        </tr>
+        <tr ng-repeat="item in order.items">
+            <th scope="row">Quantity</th>
+            <td>#{{item.quantity}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Courier</th>
+            <td>#Game Champ Postal</td>
+        </tr>
+        <tr>
+            <th scope="row">Address</th>
+            <td>#8836 247Th Street Bellerose NY 11426</td>
+        </tr>
+        <tr>
+            <th scope="row">Shipping</th>
+            <td>#Free</td>
+        </tr>
+        <tr>
+            <th scope="row">Delivery</th>
+            <td>#2 business days from purchased date guranteed!</td>
+        </tr>
+    </table>
+</details><br>
 </center>
