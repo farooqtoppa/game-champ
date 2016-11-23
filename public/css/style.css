@@ -43,6 +43,7 @@ a:hover {
   color: maroon;
 }
 
+
 #button {
   background: maroon;
   border: 2px solid white;
@@ -86,8 +87,8 @@ details summary {
 }
 
 details[open] summary {
-    background: lightgrey;
-    color: #333;
+    background: maroon;
+    color: white;
 }
 
 /* Hide the default marker. */
@@ -102,6 +103,7 @@ details summary:before {
     height: 18px;
     margin-right: 8px;
     content: "";
+    background: maroon;
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
     background-repeat: no-repeat;
     background-position: 0 0;

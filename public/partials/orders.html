@@ -24,8 +24,40 @@
             <td>#{{order.createdAt | date:"MM/dd/yyyy 'at' h:mma"}}</td>
         </tr>
         <tr>
-            <th scope="row">Customer</th>
-            <td>#{{order.user.username}}</td>
+            <th scope="row">First Name</th>
+            <td>#{{order.user.firstname}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Last Name</th>
+            <td>#{{order.user.lastname}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Address</th>
+            <td>#{{order.user.address}}</td>
+        </tr>
+        <tr>
+            <th scope="row">City</th>
+            <td>#{{order.user.city}}</td>
+        </tr>
+        <tr>
+            <th scope="row">State</th>
+            <td>#{{order.user.state}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Zip</th>
+            <td>#{{order.user.zipcode}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Phone</th>
+            <td>#{{order.user.phonenumber}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td>#{{order.user.email}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Card</th>
+            <td>#{{order.user.creditcardnumber}}</td>
         </tr>
         <tr>
             <th scope="row">Total</th>
