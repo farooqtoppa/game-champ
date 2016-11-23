@@ -20,7 +20,9 @@
       $http.post('/api/users/signup',
       {
         username: userInfo.username,
-        password: userInfo.password
+        password: userInfo.password,
+        address: userInfo.address,
+        cardnumber: userInfo.cardnumber
       })
       .catch(function(error){
         console.log(error);
