@@ -64,6 +64,10 @@ a:hover {
   text-align: center;
 }
 
+#title{
+  color: maroon;
+}
+
 details {
   background: lightgrey;
   font-weight: bold;

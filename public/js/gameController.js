@@ -127,6 +127,7 @@
       .then(function(response){
         self.cart = [];
         self.getOrders();
+        self.placeOrderMsg();
         $state.go('orders', {url: '/orders'});
       });
     } // ends deleteFromCart
@@ -168,6 +169,11 @@
     this.deleteFromMsg = function() {
       var msg = 'Item has been deleted from your cart'
       Flash.create('deleteFrom', msg);
+    }
+
+    this.placeOrderMsg = function() {
+      var msg = 'Order has been placed'
+      Flash.create('place', msg);
     }
 
   } // ends GameController
