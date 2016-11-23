@@ -90,6 +90,9 @@ details[open] summary {
     background: maroon;
     color: white;
 }
+#center{
+  background: lightgrey;
+}
 
 /* Hide the default marker. */
 details summary::-webkit-details-marker {
