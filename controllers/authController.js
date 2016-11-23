@@ -12,7 +12,7 @@ router.post('/signup', function(req, res) {
   // Register New User
   User.register(new User(
     // username and password (textfields must match)
-    { username : req.body.username}),
+    { username : req.body.username, address: req.body.address, cardnumber: req.body.cardnumber}),
     req.body.password, function(err, user) {
 
       // In case of error send obj

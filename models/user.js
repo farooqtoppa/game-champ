@@ -7,7 +7,7 @@ var UserSchema = new Schema({
   username: String,
   password: String,
   address: String,
-  cardnumber: String
+  cardnumber: Number
 });
 
 UserSchema.plugin(passportLocalMongoose);
