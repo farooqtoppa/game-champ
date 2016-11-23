@@ -12,9 +12,9 @@ var UserSchema = new Schema({
   city: String,
   state: String,
   zipcode: Number,
-  phonenumber: Number,
+  phonenumber: String,
   email: String,
-  cardnumber: Number
+  creditcardnumber: Number
 });
 
 UserSchema.plugin(passportLocalMongoose);

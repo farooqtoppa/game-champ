@@ -28,7 +28,8 @@
         state: userInfo.state,
         zipcode: userInfo.zipcode,
         phonenumber: userInfo.phonenumber,
-        email: userInfo.email
+        email: userInfo.email,
+        creditcardnumber: userInfo.creditcardnumber
       })
       .catch(function(error){
         console.log(error);
