@@ -21,8 +21,14 @@
       {
         username: userInfo.username,
         password: userInfo.password,
+        firstname: userInfo.firstname,
+        lastname: userInfo.lastname,
         address: userInfo.address,
-        cardnumber: userInfo.cardnumber
+        city: userInfo.city,
+        state: userInfo.state,
+        zipcode: userInfo.zipcode,
+        phonenumber: userInfo.phonenumber,
+        email: userInfo.email
       })
       .catch(function(error){
         console.log(error);
