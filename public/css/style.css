@@ -1,8 +1,9 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 .jumbotron {
-  background: lightblue;
+  background: lightgrey;
   color: maroon;
 }
 #rdmsg{
@@ -45,16 +46,30 @@ a:hover {
 #button {
   background: maroon;
   border: 2px solid white;
+  color: white;
+    border-radius: 10px;
+}
+
+#button:hover {
+  background: grey;
+  color: maroon;
 }
 
 #order-text {
   color: maroon;
 }
 
+#search {
+  color: maroon;
+  text-align: center;
+}
+
 details {
   background: lightgrey;
   font-weight: bold;
 }
+
+
 
 
 

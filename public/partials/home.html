@@ -1,5 +1,13 @@
 <br>
-
+<h4 id="search"> Search by name: </h4>
+<center>
+<div class="search-bar">
+<form>
+  <input ng-model="gameCtrl.searchStr" ng-change="gameCtrl.getProducts(gameCtrl.searchStr,'name')" class="textbox-border" type="textbox" name="search" placeholder="Search">
+  <hr>
+</form>
+</div>
+</center>
 <section>
 
   <div ng-repeat="product in gameCtrl.all">
@@ -18,7 +26,7 @@
               <select name="quantity" ng-model="gameCtrl.quantityAtShopIndex[$index]">
                 <option ng-repeat="num in [1,2,3,4,5,6,7,8,9,10]" value="{{num}}">{{num}}</option>
               </select>
-              <input type='submit' value="Add to Cart">
+              <input id="button" type='submit' value="Add to Cart">
           </form>
         </div>
 
