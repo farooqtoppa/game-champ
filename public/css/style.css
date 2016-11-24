@@ -1,13 +1,23 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  color: white;
+   background: url("http://imgur.com/JodQvDc.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .jumbotron {
-  background: lightgrey;
-  color: maroon;
+
+
+  background: url("http://imgur.com/JodQvDc.jpg");
+  color: white;
+  border: 2px solid white;
+
 }
 #rdmsg{
-  color: maroon;
+  color: white;
 }
 
 header {
@@ -16,7 +26,7 @@ header {
 
 a {
   margin: 15px;
-  color: maroon;
+  color: white;
 }
 
 a:hover {
@@ -34,64 +44,63 @@ a:hover {
   font-weight: 900;
 }
 #flash{
-  color: maroon;
+  color: white;
   margin-top: 10px;
   font-size: 1.2em;
 }
 
 .price {
-  color: maroon;
+  color: white;
 }
 
-
 #button {
-  background: maroon;
+  background: grey;
   border: 2px solid white;
   color: white;
     border-radius: 10px;
 }
 
-#button:hover {
-  background: grey;
-  color: maroon;
-}
-
 #order-text {
-  color: maroon;
+  color: white;
 }
 
 #search {
-  color: maroon;
+  color: white;
   text-align: center;
 }
 
 #title{
-  color: maroon;
+  color: white;
 }
 
 
 
 details {
     border-radius: 3px;
-    background: #EEE;
+    background: url("http://imgur.com/JodQvDc.jpg");
 }
 
 details summary {
     font-size: 17px;
     vertical-align: top;
-    background: #333;
-    color: #FFF;
+     background: url("http://imgur.com/JodQvDc.jpg");
+    color: white;
     border-radius: 3px;
     padding: 5px 10px;
     outline: none;
 }
 
 details[open] summary {
-    background: maroon;
-    color: white;
+    color: red;
 }
-#center{
+
+
+#login {
   background: lightgrey;
+}
+
+#num {
+  background: grey;
 }
 
 /* Hide the default marker. */
@@ -106,7 +115,7 @@ details summary:before {
     height: 18px;
     margin-right: 8px;
     content: "";
-    background: maroon;
+    background: grey;
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
     background-repeat: no-repeat;
     background-position: 0 0;
