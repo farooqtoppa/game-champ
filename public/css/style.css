@@ -1,7 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: white;
    background: url("http://imgur.com/JodQvDc.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -9,14 +8,15 @@ body {
   background-size: cover;
 }
 .jumbotron {
-
-
   background: url("http://imgur.com/JodQvDc.jpg");
   color: white;
   border: 2px solid white;
-
 }
 #rdmsg{
+  color: white;
+}
+
+#gamedetails{
   color: white;
 }
 
@@ -65,15 +65,13 @@ a:hover {
 }
 
 #search {
-  color: white;
   text-align: center;
+  color: white;
 }
 
 #title{
   color: white;
 }
-
-
 
 details {
     border-radius: 3px;
@@ -103,6 +101,10 @@ details[open] summary {
   background: grey;
 }
 
+#cart{
+  color: white;
+}
+
 /* Hide the default marker. */
 details summary::-webkit-details-marker {
     display: none;
@@ -124,6 +126,10 @@ details summary:before {
 /* Move the sprite image when the details box is open. */
 details[open] summary:before {
     background-position: -18px 0;
+}
+
+#detailtext {
+  color: white;
 }
 
 

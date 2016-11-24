@@ -16,7 +16,7 @@
 <center>
 <h4 id="order-text"> Your Order History </h4>
 <h4 id="order-text">Click order number to see more details</h4><br>
-<details ng-repeat="order in gameCtrl.orders">
+<details id="detailtext" ng-repeat="order in gameCtrl.orders">
     <summary>{{order._id}}</summary>
     <table>
         <tr>
