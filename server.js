@@ -50,4 +50,8 @@ app.use(function(req, res, next){
   res.redirect("/");
 });
 
-app.listen(process.env.PORT | 4000 )
+app.listen(port, function(){
+  console.log('=======================');
+  console.log('Running on port ' + port);
+  console.log('========================');
+});
