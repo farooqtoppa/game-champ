@@ -3,7 +3,7 @@
 <div class="container">
   <form ng-submit="authCtrl.login(userInfo)">
     <div class="form-group">
-    <div class="row">
+    <div id="signup" class="row">
       <label for="username" class="col-sm-3 col-sm-offset-3">Username</label>
     </div>
     <div class="row bottom-margin">
@@ -11,7 +11,7 @@
         <input ng-model="userInfo.username" required="true" type="username" class="form-control" placeholder="username">
       </div>
     </div>
-    <div class="row">
+    <div id="signup" class="row">
       <label for="password" class="col-sm-3 col-sm-offset-3">Password</label>
     </div>
     <div class="row bottom-margin">
